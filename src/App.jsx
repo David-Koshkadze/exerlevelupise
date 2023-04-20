@@ -56,11 +56,18 @@ function App() {
                 ჰოლდემის TOP20 ლიდერბორდი
               </p>
               {/* -------- */}
-              <div className="bg-[#25292B] rounded-[12px] px-8">
-                <div className="text-center flex items-center justify-between">
-                  <span>პოზიცია</span>
-                  <span>ვაუჩერი</span>
-                  <span>პრიზი</span>
+              <div className="bg-[#25292B] rounded-[12px] p-8">
+                <div className="text-center flex items-center justify-between font-november mb-5">
+                  <span className="pl-2.5 text-left flex-1 text-[13px] text-[#7D7D7D]">
+                    პოზიცია
+                  </span>
+                  <div className="text-left flex-1 text-[13px] text-[#7D7D7D] flex gap-1.5 items-center">
+                    <div className="bg-white w-[18px] h-3"></div>
+                    <span>ვაუჩერი</span>
+                  </div>
+                  <span className="flex-1 text-[13px] text-[#7D7D7D]">
+                    პრიზი
+                  </span>
                 </div>
                 {/* rounded gray card */}
                 <CardGray

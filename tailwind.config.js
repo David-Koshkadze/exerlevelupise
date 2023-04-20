@@ -8,7 +8,9 @@ export default {
     extend: {
       fontFamily: {
         "helvetica-bold": ['Helvetica Bold'],
-        "helvetica-medium": ['Helvetica Medium']
+        "helvetica-medium": ['Helvetica Medium'],
+        "november": ["NovemberGeLC Regular"],
+        "november-bold": ["NovemberGeLC Bold"]
       }
     },
   },

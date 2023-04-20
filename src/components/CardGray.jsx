@@ -11,9 +11,9 @@ export default function CardGray({ position, voucher, prize }) {
       >
         <span className="text-[15px]">{position}</span>
       </div>
-      <span>{voucher}</span>
+      <span className="font-november-bold text-[14px]">{voucher}</span>
       <div>
-        <span>icon </span>
+        <span>i </span>
         <span className="text-[13px]">{prize}</span>
       </div>
     </div>

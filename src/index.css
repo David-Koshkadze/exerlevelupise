@@ -12,6 +12,16 @@
   src: url(../public/fonts/Helvetica-Medium.ttf)
 }
 
+@font-face {
+  font-family: "NovemberGeLC Regular";
+  src: url(../public/fonts/NovemberGeLC-Regular.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: "NovemberGeLC Bold";
+  src: url(../public/fonts/NovemberGeLC-Bold.woff2) format("woff2")
+}
+
 /* .modal::-webkit-scrollbar {
   width: 2px;
 }
