@@ -1,36 +1,87 @@
 @tailwind base;
+
+/* Firefox */
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+} */
+
+/* Chrome, Edge, and Safari */
+/* *::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 0 solid var(--primary);
+} */
+
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Helvetica Bold';
-  src: url(../public/fonts/Helvetica-Neue-LT-GEO-Bold.ttf);
+  font-family: "Helvetica Bold";
+  src: url(/fonts/Helvetica-Neue-LT-GEO-Bold.ttf);
 }
 
 @font-face {
-  font-family: 'Helvetica Medium';
-  src: url(../public/fonts/Helvetica-Medium.ttf)
+  font-family: "Helvetica Medium";
+  src: url(/fonts/Helvetica-Medium.ttf);
 }
 
 @font-face {
   font-family: "NovemberGeLC Regular";
-  src: url(../public/fonts/NovemberGeLC-Regular.woff2) format("woff2")
+  src: url(/fonts/NovemberGeLC-Regular.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "NovemberGeLC Bold";
-  src: url(../public/fonts/NovemberGeLC-Bold.woff2) format("woff2")
+  src: url(/fonts/NovemberGeLC-Bold.woff2) format("woff2");
 }
 
-/* .modal::-webkit-scrollbar {
-  width: 2px;
+.card-scroll-custom {
 }
 
-.modal::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+/* Firefox */
+.card-scroll-custom {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
 }
 
-.modal::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-} */
+/* Chrome, Edge, and Safari */
+.card-scroll-custom::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-scroll-custom::-webkit-scrollbar-track {
+  background: #2C3234;
+  border-radius: 2px;
+}
+
+.card-scroll-custom::-webkit-scrollbar-thumb {
+  background-color: #F05A22;
+  border-radius: 14px;
+  border: 0 solid red;
+}
+
+
+/* ----------- */
+
+.ticket-voucher-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  background-color: #F05A22;
+  width: 4px;
+  height: 46px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 0 4px 0 #EF5A21;
+}
