@@ -1,14 +1,23 @@
-import CardGray from "./components/CardGray";
+import { useEffect, useState } from "react";
 import SimilarSales from "./components/SimilarSales";
 import Terms from "./components/Terms";
-import VoucherCard from "./components/VoucherCard";
+
+import CashGames from "./components/CashGames";
+import SpringSeries from "./components/SpringSeries";
+
+const activeTabClasses = `h-[90px] bg-[#EF5A21] m-auto rounded-[12px] w-full mt-[-7px] flex justify-center items-center flex-col cursor-pointer`;
+const inactiveTabClasses = `bg-transparent m-auto w-full flex justify-center items-center flex-col cursor-pointer`;
 
 function App() {
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(1); // start tabs with one
 
   const changeTabIndex = (index) => {
     setTabIndex(index);
-  }
+  };
+
+  useEffect(() => {
+    console.log(tabIndex);
+  }, [tabIndex, setTabIndex]);
 
   return (
     <div className="min-h-screen w-full bg-black flex justify-center">
@@ -33,86 +42,67 @@ function App() {
 
         {/* Body */}
         <div className="px-[43px] text-white">
-          <p className="text-[20px] leading-[26px] mb-[14px]">
-            მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი
-          </p>
-          <p className="text-base leading-[18px] mb-[32px]">
+          {tabIndex === 1 ? (
+            <p className="text-[20px] leading-[26px] mb-[14px] font-november-bold">
+              მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი
+            </p>
+          ) : tabIndex === 2 || tabIndex === 3 ? (
+            <p className="text-[20px] leading-[26px] mb-[14px] font-november-bold">
+              მოიპოვე 10 საგზურიდან ერთ-ერთი
+            </p>
+          ) : null}
+
+          <p className="text-base leading-[18px] mb-[32px] font-november">
             მოხვდი პოკერის ფესტივალზე მალტაში
           </p>
 
           {/* Tabs Switch */}
-          <div className="w-full h-[77px] bg-[#2C3234] rounded-[12px] grid grid-cols-3">
+          <div className="w-full h-[77px] bg-[#2C3234] rounded-[12px] grid grid-cols-3 mb-6 font-november-bold [&>div>span]:font-november">
             {/* Tab 1 */}
-            <div 
-            
-            className="h-[90px] bg-[#EF5A21] m-auto rounded-[12px] w-full mt-[-7px] flex justify-center items-center flex-col">
-              <span className="text-[14px]">1 - 29 აპრილი</span>
-              <span className="text-[18px]">Cash Games</span>
+            <div
+              onClick={() => changeTabIndex(1)}
+              className={
+                tabIndex === 1 ? `${activeTabClasses}` : `${inactiveTabClasses}`
+              }
+            >
+              <span className={tabIndex == 1 ? 'text-[12px]' : 'text-[9px]'}>1 - 29 აპრილი</span>
+              <p className={tabIndex == 1 ? 'text-[18px]' : 'text-[13px]'}>Cash Games</p>
             </div>
-            <div></div>
-            <div></div>
+            {/* Tab 2 */}
+            <div
+              onClick={() => changeTabIndex(2)}
+              className={
+                tabIndex === 2 ? `${activeTabClasses}` : `${inactiveTabClasses}`
+              }
+            >
+              <span className={tabIndex == 2 ? 'text-[12px]' : 'text-[9px]'}>13 - 29 აპრილი</span>
+              <p className={tabIndex == 2 ? 'text-[16px]' : 'text-[13px]'}>Spring Series</p>
+            </div>
+            {/* Tab 3 */}
+            <div
+              onClick={() => changeTabIndex(3)}
+              className={
+                tabIndex === 3 ? `${activeTabClasses}` : `${inactiveTabClasses}`
+              }
+            >
+              <span className={tabIndex == 3 ? 'text-[12px]' : 'text-[9px]'}>30 აპრილი</span>
+              <p className={tabIndex == 3 ? 'text-[16px]' : 'text-[13px]'}>Final Stage</p>
+            </div>
           </div>
 
           {/* Section 1 Container  */}
 
-          <div className="mt-6 rounded-[16px] bg-[#2C3234] w-full mb-14">
-            <div
-              className="bg-[#F05A22] max-w-[250px] h-1.5 rounded-b-md mx-auto mb-4"
-              style={{
-                boxShadow: "0 0 10px 0 #f05a22",
-              }}
-            ></div>
-            <h1 className="mx-auto text-center mb-5">1L რეიკი = 1 ქულას</h1>
-            {/* black inner container */}
-            <div className="w-full bg-[#171718] border-[#25292B] border-x-4 border-b-4 rounded-b-[16px] p-6">
-              <p className="text-base text-center mx-auto mb-5">
-                ჰოლდემის TOP20 ლიდერბორდი
-              </p>
-              {/* -------- */}
-              <div className="bg-[#25292B] rounded-[12px] p-8 h-[455px] mb-6">
-                <div className="text-center flex items-center justify-between font-november mb-5">
-                  <span className="pl-2.5 text-left flex-1 text-[13px] text-[#7D7D7D]">
-                    პოზიცია
-                  </span>
-                  <div className="text-left flex-1 text-[13px] text-[#7D7D7D] flex gap-1.5 items-center">
-                    <div className="bg-white w-[18px] h-3"></div>
-                    <span>ვაუჩერი</span>
-                  </div>
-                  <span className="flex-1 text-[13px] text-[#7D7D7D]">
-                    პრიზი
-                  </span>
-                </div>
-
-                {/* rounded gray card */}
-
-                <div className="border bg-transparent overflow-y-scroll card-scroll-custom max-h-[90%] pr-4">
-                  {Array.from({ length: 10 }).map((item, idx) => (
-                    <CardGray
-                      id={idx}
-                      position={idx + 1}
-                      voucher={"1500L"}
-                      prize={"კატეგორიული პრიზი"}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* Ticket and vouchers cards */}
-              <div className="w-full bg-[#25292B] rounded-[16px] p-6 flex flex-col gap-2.5">
-                <VoucherCard />
-                <VoucherCard />
-                <VoucherCard />
-              </div>
-            </div>
-          </div>
+          {tabIndex === 1 ? (
+            <CashGames />
+          ) : tabIndex === 2 ? (
+            <SpringSeries />
+          ) : null}
 
           {/* Terms and qonditions */}
-          
+
           <Terms />
 
           <SimilarSales />
-
-
         </div>
         {/* Play Button Fixed Bottom */}
         <div className="fixed bottom-0 bg-[#171718] w-full max-w-[940px] h-[70px] border-t-[3px] border-[#F05A22] flex justify-center items-center">

@@ -36,6 +36,11 @@
 }
 
 @font-face {
+  font-family: "Helvetica Roman";
+  src: url(/fonts/Helvetica-Neue-LT-GEO-55-Roman.ttf);
+}
+
+@font-face {
   font-family: "NovemberGeLC Regular";
   src: url(/fonts/NovemberGeLC-Regular.woff2) format("woff2");
 }
@@ -121,4 +126,11 @@
   border-bottom: 2px solid #fff;
   transform: rotate(-45deg);
   transition: all 0.4s;
+}
+
+.text-up {
+  text-transform: uppercase;
+  -moz-font-feature-settings: "case";
+  -webkit-font-feature-settings: "case";
+  font-feature-settings: "case" on;
 }

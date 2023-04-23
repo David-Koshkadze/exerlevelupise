@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         "helvetica-bold": ['Helvetica Bold'],
         "helvetica-medium": ['Helvetica Medium'],
+        "helvetica-roman": ['Helvetica Roman'],
         "november": ["NovemberGeLC Regular"],
         "november-bold": ["NovemberGeLC Bold"]
       }
