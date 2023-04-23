@@ -1,7 +1,15 @@
 import CardGray from "./components/CardGray";
+import SimilarSales from "./components/SimilarSales";
+import Terms from "./components/Terms";
 import VoucherCard from "./components/VoucherCard";
 
 function App() {
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const changeTabIndex = (index) => {
+    setTabIndex(index);
+  }
+
   return (
     <div className="min-h-screen w-full bg-black flex justify-center">
       <div className="modal mt-8 pb-[90px] max-w-[940px] w-[940px] bg-[#1C1D1E] rounded-t-lg relative top-0 scroll-smooth">
@@ -34,7 +42,10 @@ function App() {
 
           {/* Tabs Switch */}
           <div className="w-full h-[77px] bg-[#2C3234] rounded-[12px] grid grid-cols-3">
-            <div className="h-[90px] bg-[#EF5A21] m-auto rounded-[12px] w-full mt-[-7px] flex justify-center items-center flex-col">
+            {/* Tab 1 */}
+            <div 
+            
+            className="h-[90px] bg-[#EF5A21] m-auto rounded-[12px] w-full mt-[-7px] flex justify-center items-center flex-col">
               <span className="text-[14px]">1 - 29 აპრილი</span>
               <span className="text-[18px]">Cash Games</span>
             </div>
@@ -44,7 +55,7 @@ function App() {
 
           {/* Section 1 Container  */}
 
-          <div className="mt-6 rounded-[16px] bg-[#2C3234] w-full">
+          <div className="mt-6 rounded-[16px] bg-[#2C3234] w-full mb-14">
             <div
               className="bg-[#F05A22] max-w-[250px] h-1.5 rounded-b-md mx-auto mb-4"
               style={{
@@ -96,15 +107,12 @@ function App() {
           </div>
 
           {/* Terms and qonditions */}
-          <div className="w-full h-max">
-            <h2>წესები და პირობები</h2>
+          
+          <Terms />
 
-            <div className="bg-transparent flex flex-col gap-2.5">
-                    <div>
+          <SimilarSales />
 
-                    </div>
-            </div>
-          </div>
+
         </div>
         {/* Play Button Fixed Bottom */}
         <div className="fixed bottom-0 bg-[#171718] w-full max-w-[940px] h-[70px] border-t-[3px] border-[#F05A22] flex justify-center items-center">
