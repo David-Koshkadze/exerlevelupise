@@ -4,6 +4,7 @@ import Terms from "./components/Terms";
 
 import CashGames from "./components/CashGames";
 import SpringSeries from "./components/SpringSeries";
+import AdditionalCard from "./components/AdditionalCard";
 
 const activeTabClasses = `h-[90px] bg-[#EF5A21] m-auto rounded-[12px] w-full mt-[-7px] flex justify-center items-center flex-col cursor-pointer`;
 const inactiveTabClasses = `bg-transparent m-auto w-full flex justify-center items-center flex-col cursor-pointer`;
@@ -97,6 +98,9 @@ function App() {
           ) : tabIndex === 2 ? (
             <SpringSeries />
           ) : null}
+
+          {/* Additional Card */}
+          <AdditionalCard />
 
           {/* Terms and qonditions */}
 

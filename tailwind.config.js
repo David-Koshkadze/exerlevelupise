@@ -1,20 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        "helvetica-bold": ['Helvetica Bold'],
-        "helvetica-medium": ['Helvetica Medium'],
-        "helvetica-roman": ['Helvetica Roman'],
-        "november": ["NovemberGeLC Regular"],
-        "november-bold": ["NovemberGeLC Bold"]
-      }
+        "helvetica-bold": ["Helvetica Bold"],
+        "helvetica-medium": ["Helvetica Medium"],
+        "helvetica-roman": ["Helvetica Roman"],
+        november: ["NovemberGeLC Regular"],
+        "november-bold": ["NovemberGeLC Bold"],
+      },
+      colors: {
+        orange: "#F05A22",
+      },
     },
   },
   plugins: [],
-}
-
+};
