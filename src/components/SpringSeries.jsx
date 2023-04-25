@@ -116,7 +116,7 @@ export default function SpringSeries() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center gap-16 bg-contain w-full h-[104px] bg-[url('/assets/main-bg.png')] bg-no-repeat">
+            <div className="mb-5 flex justify-center gap-16 bg-contain w-full h-[104px] bg-[url('/assets/main-bg.png')] bg-no-repeat">
               <div className="flex flex-col pt-4">
                 <p className="text-[22px]">Main Events</p>
                 <span className="text-[#FFBE00] text-[26px]">150 000₾</span>
@@ -128,6 +128,12 @@ export default function SpringSeries() {
                 </span>
               </div>
             </div>
+
+            <span className="font-november text-sm text-center text-gray-400">
+              * სამივე ტურნირის გამარჯვებულები მიიღებენ ბეჭდებს და ფინალურ
+              ეტაპზე, The Lord of the Rings ტურნირზე, იბრძოლებენ The Festival in
+              Malta-ს საგზურის მისაღებად.
+            </span>
           </div>
         </div>
       </div>
