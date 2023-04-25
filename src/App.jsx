@@ -5,6 +5,7 @@ import Terms from "./components/Terms";
 import CashGames from "./components/CashGames";
 import SpringSeries from "./components/SpringSeries";
 import AdditionalCard from "./components/AdditionalCard";
+import FinalStage from "./components/FinalStage";
 
 const activeTabClasses = `h-[90px] bg-[#EF5A21] m-auto rounded-[12px] w-full mt-[-7px] flex justify-center items-center flex-col cursor-pointer`;
 const inactiveTabClasses = `bg-transparent m-auto w-full flex justify-center items-center flex-col cursor-pointer`;
@@ -24,7 +25,7 @@ function App() {
     <div className="min-h-screen w-full bg-black flex justify-center">
       <div className="modal mt-8 pb-[90px] max-w-[940px] w-[940px] bg-[#1C1D1E] rounded-t-lg relative top-0 scroll-smooth">
         {/* Close Icon */}
-        <div className="sticky top-0">
+        <div className="sticky top-0 z-[9999]">
           <div className="w-[34px] h-[34px] rounded-full bg-[#25292B] absolute top-4 right-4 cursor-pointer grid place-items-center">
             <span className="text-white font-bold">&#10005;</span>
           </div>
@@ -39,7 +40,10 @@ function App() {
         </div>
 
         {/* Image */}
-        <div className="w-full h-[350px] bg-[#D7C860] rounded-t-xl mb-6"></div>
+        <div
+          className="w-full rounded-t-xl h-auto min-h-[200px] bg-cover pt-[38%] mb-6"
+          style={{ backgroundImage: "url(/assets/banner.jpg)" }}
+        ></div>
 
         {/* Body */}
         <div className="px-[43px] text-white">
@@ -66,8 +70,12 @@ function App() {
                 tabIndex === 1 ? `${activeTabClasses}` : `${inactiveTabClasses}`
               }
             >
-              <span className={tabIndex == 1 ? 'text-[12px]' : 'text-[9px]'}>1 - 29 აპრილი</span>
-              <p className={tabIndex == 1 ? 'text-[18px]' : 'text-[13px]'}>Cash Games</p>
+              <span className={tabIndex == 1 ? "text-[12px]" : "text-[9px]"}>
+                1 - 29 აპრილი
+              </span>
+              <p className={tabIndex == 1 ? "text-[18px]" : "text-[13px]"}>
+                Cash Games
+              </p>
             </div>
             {/* Tab 2 */}
             <div
@@ -76,8 +84,12 @@ function App() {
                 tabIndex === 2 ? `${activeTabClasses}` : `${inactiveTabClasses}`
               }
             >
-              <span className={tabIndex == 2 ? 'text-[12px]' : 'text-[9px]'}>13 - 29 აპრილი</span>
-              <p className={tabIndex == 2 ? 'text-[16px]' : 'text-[13px]'}>Spring Series</p>
+              <span className={tabIndex == 2 ? "text-[12px]" : "text-[9px]"}>
+                13 - 29 აპრილი
+              </span>
+              <p className={tabIndex == 2 ? "text-[16px]" : "text-[13px]"}>
+                Spring Series
+              </p>
             </div>
             {/* Tab 3 */}
             <div
@@ -86,8 +98,12 @@ function App() {
                 tabIndex === 3 ? `${activeTabClasses}` : `${inactiveTabClasses}`
               }
             >
-              <span className={tabIndex == 3 ? 'text-[12px]' : 'text-[9px]'}>30 აპრილი</span>
-              <p className={tabIndex == 3 ? 'text-[16px]' : 'text-[13px]'}>Final Stage</p>
+              <span className={tabIndex == 3 ? "text-[12px]" : "text-[9px]"}>
+                30 აპრილი
+              </span>
+              <p className={tabIndex == 3 ? "text-[16px]" : "text-[13px]"}>
+                Final Stage
+              </p>
             </div>
           </div>
 
@@ -97,6 +113,8 @@ function App() {
             <CashGames />
           ) : tabIndex === 2 ? (
             <SpringSeries />
+          ) : tabIndex === 3 ? (
+            <FinalStage />
           ) : null}
 
           {/* Additional Card */}
