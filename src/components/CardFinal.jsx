@@ -2,10 +2,12 @@ import React from "react";
 
 export default function CardFinal({ title, children }) {
   return (
-    <div className="final-stage-card relative bg-[#2C3234] rounded-[12px] font-november">
-      <p className="font-november-bold text-sm text-center my-5">{title}</p>
+    <div className="final-stage-card relative bg-[#25292B] rounded-[12px] font-november">
+      <div className="bg-[#2C3234] w-full rounded-t-[12px] py-5">
+        <p className="font-november-bold text-sm text-center">{title}</p>
+      </div>
 
-      <div className="bg-[#25292B] w-full rounded-b-[12px] px-2 py-2 flex flex-col gap-2">
+      <div className="bg-transparent w-full rounded-b-[12px] px-2 py-2 flex flex-col gap-2">
         {children}
       </div>
     </div>
