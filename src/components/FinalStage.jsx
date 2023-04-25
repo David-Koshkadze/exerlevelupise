@@ -99,6 +99,22 @@ export default function FinalStage() {
             />
           </CardFinal>
         </div>
+
+        <div className="mt-6 rounded-[16px] bg-[#2C3234] w-full mb-14">
+          <div
+            className="bg-orange max-w-[250px] h-1.5 rounded-b-md mx-auto mb-4"
+            style={{
+              boxShadow: "0 0 10px 0 #f05a22",
+            }}
+          ></div>
+          <h1 className="mx-auto text-center mb-5 text-[18px] font-helvetica-bold text-up">
+            მოიგე საგზური 30 აპრილის ფინალურ ტურნირებზე
+          </h1>
+          {/* black inner container */}
+          <div className="flex flex-col w-full bg-[#171718] border-[#25292B] border-x-4 border-b-4 rounded-b-[16px] p-6 relative">
+            
+          </div>
+        </div>
       </div>
     </div>
   );

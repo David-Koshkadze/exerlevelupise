@@ -80,6 +80,57 @@ export default function SpringSeries() {
           </div>
         </div>
       </div>
+
+      {/* tournament cards */}
+      <div className="mt-6 rounded-[16px] bg-[#2C3234] w-full mb-6">
+        <div className="flex flex-col w-full bg-[#171718] border-[#25292B] border-4 border-b-4 rounded-[16px] p-6 relative">
+          <h1 className="mx-auto text-center mb-5 text-[18px] font-helvetica-bold text-up">
+            ყოველდღიური ტურნირები და სატელიტები
+          </h1>
+
+          <div className="bg-transparent flex flex-col items-center font-helvetica-bold">
+            <div className="flex-col md:flex-row flex gap-4 w-full mb-4">
+              <div className="flex pt-5 px-7 gap-8 w-full h-[104px] bg-contain bg-[url('/assets/tournament-bg2.png')] bg-no-repeat">
+                <div className="flex flex-col">
+                  <p className="text-[15px]">Holdem Highrollers</p>
+                  <span className="text-[#FFBE00] text-[24px]">50 000 ₾</span>
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-[13px] mb-1.5 mt-0.5">ბაი-ინი - 550₾</p>
+                  <span className="px-4 pt-1 font-helvetica-medium text-[14px] bg-[#B78648] rounded-l-full rounded-tr-full text-center">
+                    27 აპრილი
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex pt-5 px-7 gap-8 w-full h-[104px] bg-contain bg-[url('/assets/tournament-bg2.png')] bg-no-repeat">
+                <div className="flex flex-col">
+                  <p className="text-[15px]">Omaha Highrollers</p>
+                  <span className="text-[#FFBE00] text-[24px]">50 000 ₾</span>
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-[13px] mb-1.5 mt-0.5">ბაი-ინი - 550₾</p>
+                  <span className="px-4 pt-1 font-helvetica-medium text-[14px] bg-[#B78648] rounded-l-full rounded-tr-full text-center">
+                    28 აპრილი
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center gap-16 bg-contain w-full h-[104px] bg-[url('/assets/main-bg.png')] bg-no-repeat">
+              <div className="flex flex-col pt-4">
+                <p className="text-[22px]">Main Events</p>
+                <span className="text-[#FFBE00] text-[26px]">150 000₾</span>
+              </div>
+              <div className="flex flex-col pt-5">
+                <p className="text-base mb-2">ბაი-ინი - 550₾</p>
+                <span className="text-base text-[#094B3D] bg-[#D7C860] pt-1 px-4 font-helvetica-medium text-[14px] rounded-l-full rounded-tr-full text-center">
+                  29 აპრილი
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
