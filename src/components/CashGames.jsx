@@ -15,9 +15,10 @@ export default function CashGames() {
         1L რეიკი = 1 ქულას
       </h1>
       {/* black inner container */}
-      <div className="w-full rounded-b-[16px] border-x-4 border-b-4 border-[#25292B] bg-[#171718] p-6">
-        <p className="mx-auto mb-5 text-center font-november-bold text-base">
+      <div className="w-full rounded-b-[16px] border-x-4 border-b-4 border-[#25292B] bg-[#25292B] p-0 pt-1 md:bg-[#171718] md:p-6">
+        <p className="mx-auto mb-0 text-center font-november-bold text-base md:mb-5">
           ჰოლდემის TOP20 ლიდერბორდი
+          <img src=""/>
         </p>
         {/* -------- */}
         <LeaderTable />
@@ -32,7 +33,7 @@ export default function CashGames() {
 
         <VoucherCards />
 
-        <p className="mt-4 text-center font-november text-[13px] md:text-base text-gray-400">
+        <p className="mt-4 text-center font-november text-[13px] text-gray-400 md:text-base">
           ლიდერბორდის შედეგები განახლდება{" "}
           <a href="#" className="text-orange underline">
             პოკერის ლობიში

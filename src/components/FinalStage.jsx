@@ -23,7 +23,7 @@ export default function FinalStage() {
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-4">
             <CardFinal title="A კატეგორიის საგზურში შედის">
               <CardFinalItem
                 icon="/assets/final-item-ticket-icon.png"
@@ -113,9 +113,9 @@ export default function FinalStage() {
           მოიგე საგზური 30 აპრილის ფინალურ ტურნირებზე
         </h1>
         {/* black inner container */}
-        <div className="relative flex w-full flex-col rounded-b-[16px] border-x-4 border-b-4 border-[#25292B] bg-[#171718] p-6">
+        <div className="relative flex w-full flex-col rounded-b-[16px] border-none md:border-x-4 border-b-4 border-[#25292B] bg-[#171718] p-6">
           {/* Grid Component */}
-          <div className="grid-container-area h-[330px]">
+          <div className="grid-container-area h-max">
             <div
               id="item-0"
               className="relative flex flex-col justify-center rounded-[12px] bg-[#1E2122] px-7"

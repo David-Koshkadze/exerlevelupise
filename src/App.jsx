@@ -25,10 +25,6 @@ function App() {
     <div className="flex min-h-screen w-full justify-center bg-black">
       <div className="modal relative top-0 mt-8 w-[940px] max-w-[940px] scroll-smooth rounded-t-lg bg-[#1C1D1E] pb-[90px]">
         {/* Image */}
-        <div
-          className="mb-6 h-auto min-h-[200px] w-full rounded-t-xl bg-cover pt-[38%]"
-          style={{ backgroundImage: "url(/assets/banner.jpg)" }}
-        ></div>
 
         <div className="z-[9999] block md:sticky md:top-0">
           <div className="absolute right-4 top-4 hidden h-[34px] w-[34px] cursor-pointer place-items-center rounded-full bg-[#25292B] md:grid">
@@ -44,8 +40,13 @@ function App() {
           </div>
         </div>
 
+        <div
+          className="mb-6 h-auto min-h-[200px] w-full rounded-t-xl bg-cover pt-[38%]"
+          style={{ backgroundImage: "url(/assets/banner.jpg)" }}
+        ></div>
+
         {/* Body */}
-        <div className="px-4 md:px-[43px] text-white">
+        <div className="px-4 text-white md:px-[43px]">
           {tabIndex === 1 ? (
             <p className="mb-[14px] font-november-bold text-base leading-[26px] md:text-[20px]">
               მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი
@@ -124,7 +125,6 @@ function App() {
           <Terms />
 
           <SimilarSales />
-
         </div>
         {/* Play Button Fixed Bottom */}
         <div className="fixed bottom-0 flex h-[70px] w-full max-w-[940px] items-center justify-center border-t-[3px] border-[#F05A22] bg-[#171718]">

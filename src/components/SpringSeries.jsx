@@ -1,5 +1,6 @@
 import React from "react";
 import VoucherCards from "./VoucherCards";
+import LeaderTable from "./LeaderTable";
 
 export default function SpringSeries() {
   return (
@@ -66,7 +67,7 @@ export default function SpringSeries() {
         </h1>
         {/* black inner container */}
         <div className="flex flex-col w-full bg-[#171718] border-[#25292B] border-x-4 border-b-4 rounded-b-[16px] p-6 relative">
-          <div className="mx-auto bg-[#202324] rounded-full pl-4 pr-12 py-2 relative flex items-center border-2 border-[#2C3234]">
+          <div className="mb-2 mx-auto bg-[#202324] rounded-full pl-4 pr-12 py-2 relative flex items-center border-2 border-[#2C3234]">
             <span className="font-november-bold text-[13px]">
               ქულების დაგროვების მექანიკა
             </span>
@@ -79,6 +80,8 @@ export default function SpringSeries() {
               />
             </div>
           </div>
+
+          <LeaderTable />
 
           <VoucherCards />
         </div>

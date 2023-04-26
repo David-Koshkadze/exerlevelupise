@@ -182,3 +182,13 @@
 #item-4 {
   grid-area: label4;
 }
+
+@media (max-width: 768px) {
+  .grid-container-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-container-area > div {
+    padding: 1rem;
+  }
+}
