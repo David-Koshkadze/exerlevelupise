@@ -1,4 +1,5 @@
 import React from "react";
+import VoucherCards from "./VoucherCards";
 
 export default function SpringSeries() {
   return (
@@ -78,6 +79,8 @@ export default function SpringSeries() {
               />
             </div>
           </div>
+
+          <VoucherCards />
         </div>
       </div>
 

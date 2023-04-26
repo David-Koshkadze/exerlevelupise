@@ -150,3 +150,35 @@
   border-bottom-right-radius: 4px;
   box-shadow: 0 0 4px 0 #ef5a21;
 }
+
+.grid-container-area {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas:
+    "label0 label3"
+    "label0 label3"
+    "label1 label3"
+    "label1 label4"
+    "label2 label4"
+    "label2 label4";
+  gap: 16px;
+}
+
+#item-0 {
+  grid-area: label0;
+}
+#item-1 {
+  grid-area: label1;
+}
+#item-2 {
+  grid-area: label2;
+}
+#item-3 {
+  grid-area: label3;
+}
+#item-4 {
+  grid-area: label4;
+}
