@@ -22,47 +22,46 @@ function App() {
   }, [tabIndex, setTabIndex]);
 
   return (
-    <div className="min-h-screen w-full bg-black flex justify-center">
-      <div className="modal mt-8 pb-[90px] max-w-[940px] w-[940px] bg-[#1C1D1E] rounded-t-lg relative top-0 scroll-smooth">
-        {/* Close Icon */}
-        <div className="sticky top-0 z-[9999]">
-          <div className="w-[34px] h-[34px] rounded-full bg-[#25292B] absolute top-4 right-4 cursor-pointer grid place-items-center">
-            <span className="text-white font-bold">&#10005;</span>
+    <div className="flex min-h-screen w-full justify-center bg-black">
+      <div className="modal relative top-0 mt-8 w-[940px] max-w-[940px] scroll-smooth rounded-t-lg bg-[#1C1D1E] pb-[90px]">
+        {/* Image */}
+        <div
+          className="mb-6 h-auto min-h-[200px] w-full rounded-t-xl bg-cover pt-[38%]"
+          style={{ backgroundImage: "url(/assets/banner.jpg)" }}
+        ></div>
+
+        <div className="z-[9999] block md:sticky md:top-0">
+          <div className="absolute right-4 top-4 hidden h-[34px] w-[34px] cursor-pointer place-items-center rounded-full bg-[#25292B] md:grid">
+            <span className="font-bold text-white">&#10005;</span>
           </div>
-          <div className="w-[280px] h-[34px] rounded-full bg-[#25292B] absolute top-4 left-4 flex items-center pl-[5px] text-[13px] text-white text-center gap-2">
-            <div className="rounded-full w-[81px] h-[25px] bg-[#7D7D7D]">
+          <div className="absolute left-4 top-4 flex h-[34px] w-[280px] items-center gap-2 rounded-full bg-[#25292B] pl-[5px] text-center text-[13px] text-white">
+            <div className="h-[25px] w-[81px] rounded-full bg-[#7D7D7D]">
               სლოტები
             </div>
-            <span className="text-[15px] whitespace-nowrap font-helvetica-bold">
+            <span className="whitespace-nowrap font-helvetica-bold text-[15px]">
               10 იანვარი - 12 მარტი
             </span>
           </div>
         </div>
 
-        {/* Image */}
-        <div
-          className="w-full rounded-t-xl h-auto min-h-[200px] bg-cover pt-[38%] mb-6"
-          style={{ backgroundImage: "url(/assets/banner.jpg)" }}
-        ></div>
-
         {/* Body */}
-        <div className="px-[43px] text-white">
+        <div className="px-4 md:px-[43px] text-white">
           {tabIndex === 1 ? (
-            <p className="text-[20px] leading-[26px] mb-[14px] font-november-bold">
+            <p className="mb-[14px] font-november-bold text-base leading-[26px] md:text-[20px]">
               მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი
             </p>
           ) : tabIndex === 2 || tabIndex === 3 ? (
-            <p className="text-[20px] leading-[26px] mb-[14px] font-november-bold">
+            <p className="mb-[14px] font-november-bold text-base leading-[26px] md:text-[20px]">
               მოიპოვე 10 საგზურიდან ერთ-ერთი
             </p>
           ) : null}
 
-          <p className="text-base leading-[18px] mb-[32px] font-november">
+          <p className="mb-[32px] font-november text-sm leading-[18px] md:text-base">
             მოხვდი პოკერის ფესტივალზე მალტაში
           </p>
 
           {/* Tabs Switch */}
-          <div className="w-full h-[77px] bg-[#2C3234] rounded-[12px] grid grid-cols-3 mb-6 font-november-bold [&>div>span]:font-november">
+          <div className="mb-6 grid h-[77px] w-full grid-cols-3 rounded-[12px] bg-[#2C3234] font-november-bold [&>div>span]:font-november">
             {/* Tab 1 */}
             <div
               onClick={() => changeTabIndex(1)}
@@ -125,10 +124,11 @@ function App() {
           <Terms />
 
           <SimilarSales />
+
         </div>
         {/* Play Button Fixed Bottom */}
-        <div className="fixed bottom-0 bg-[#171718] w-full max-w-[940px] h-[70px] border-t-[3px] border-[#F05A22] flex justify-center items-center">
-          <button className="bg-[#F05A22] hover:bg-[#ee4c1e] text-white py-2 px-4 w-[144px] h-[36px] inline-flex justify-center items-center rounded-[3px] text-[15px] font-helvetica-medium">
+        <div className="fixed bottom-0 flex h-[70px] w-full max-w-[940px] items-center justify-center border-t-[3px] border-[#F05A22] bg-[#171718]">
+          <button className="inline-flex h-[36px] w-[144px] items-center justify-center rounded-[3px] bg-[#F05A22] px-4 py-2 font-helvetica-medium text-[15px] text-white hover:bg-[#ee4c1e]">
             ითამაშე
           </button>
         </div>

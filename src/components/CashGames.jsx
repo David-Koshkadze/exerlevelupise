@@ -29,6 +29,15 @@ export default function CashGames() {
           Top20 ლიდერბორდი ჰოლდემში
         </p>
         <LeaderTable />
+
+        <VoucherCards />
+
+        <p className="mt-4 text-center font-november text-[13px] md:text-base text-gray-400">
+          ლიდერბორდის შედეგები განახლდება{" "}
+          <a href="#" className="text-orange underline">
+            პოკერის ლობიში
+          </a>
+        </p>
       </div>
     </div>
   );
